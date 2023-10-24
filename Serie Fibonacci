@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int fibonacci(int n) {
+    if (n <= 1) {
+        return n;
+    }//Fin de if
+	else{
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }//Fin de else
+}//Fin de fibonacci
+
+int main() {
+	int n,i;
+
+    printf("Ingrese el numero para la serie fibonacci:");
+    scanf("%d", &n);
+
+    printf("Serie Fibonacci de los primeros %d numeros:\n", n);
+    for (i=0; i<n; i++) {
+        printf("%d ", fibonacci(i));
+    }//Fin de for
+    printf("\n");
+    
+    printf("\n\n--------FIN DEL PROGRAMA--------");
+	return 0;
+}//Fin de main
